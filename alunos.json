@@ -1,0 +1,10 @@
+[
+  {
+    "id": 10,
+    "nome": "jp",
+    "cpf": "031",
+    "ativo": true,
+    "treinos": [],
+    "pagamentos": []
+  }
+]

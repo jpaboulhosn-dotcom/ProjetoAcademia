@@ -1,0 +1,11 @@
+app\util\JsonUtil.class
+app\model\Exercicio.class
+app\util\JsonUtil$1.class
+app\App.class
+app\model\Treino.class
+app\service\AcademiaService.class
+app\util\CsvUtil.class
+app\model\Professor.class
+app\model\Aluno.class
+app\model\Pagamento.class
+app\model\Plano.class
