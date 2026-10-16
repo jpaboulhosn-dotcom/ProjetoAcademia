@@ -23,13 +23,9 @@ public class AcademiaService {
             new ArrayList<>();
 
 
-    // ====================================
-    // CADASTROS
-    // ====================================
 
 
-    // REGRA 1:
-    // Nao permite CPF repetido.
+
     public boolean cadastrarAluno(Aluno aluno) {
 
         for (Aluno a : alunos) {
@@ -78,9 +74,7 @@ public class AcademiaService {
     }
 
 
-    // REGRA 2:
-    // Treino so pode ser criado
-    // com professor ativo.
+    
     public boolean cadastrarTreino(
             Treino treino) {
 
@@ -117,9 +111,7 @@ public class AcademiaService {
     }
 
 
-    // ====================================
-    // CONSULTAS
-    // ====================================
+
 
 
     public Aluno buscarAlunoPorId(int id) {
@@ -189,10 +181,7 @@ public class AcademiaService {
     }
 
 
-    // ====================================
-    // PESQUISA
-    // ====================================
-
+   
 
     public ArrayList<Aluno>
     pesquisarAlunoPorNome(String texto) {
@@ -215,9 +204,6 @@ public class AcademiaService {
     }
 
 
-    // ====================================
-    // EDICAO E DESATIVACAO
-    // ====================================
 
 
     public boolean editarAluno(
@@ -264,13 +250,10 @@ public class AcademiaService {
     }
 
 
-    // ====================================
-    // ASSOCIACOES
-    // ====================================
 
 
-    // REGRA 3:
-    // Aluno e plano precisam estar ativos.
+
+   
     public boolean associarPlanoAoAluno(
             int alunoId,
             int planoId) {
@@ -295,9 +278,7 @@ public class AcademiaService {
     }
 
 
-    // REGRA 4:
-    // Aluno precisa estar ativo
-    // e nao recebe treino duplicado.
+  
     public boolean associarTreinoAoAluno(
             int alunoId,
             int treinoId) {
@@ -319,9 +300,7 @@ public class AcademiaService {
     }
 
 
-    // REGRA 5:
-    // Treino nao recebe
-    // exercicio duplicado.
+
     public boolean associarExercicioAoTreino(
             int treinoId,
             int exercicioId) {
@@ -344,16 +323,9 @@ public class AcademiaService {
     }
 
 
-    // ====================================
-    // PAGAMENTOS
-    // ====================================
 
 
-    // REGRA 6:
-    // A mensalidade usa o valor
-    // do plano do aluno.
-    // Nao permite mensalidade
-    // repetida para o mesmo mes.
+ 
     public boolean gerarMensalidade(
             int alunoId,
             int pagamentoId,
@@ -383,9 +355,6 @@ public class AcademiaService {
     }
 
 
-    // REGRA 7:
-    // Pagamento ja pago
-    // nao pode ser pago novamente.
     public boolean pagarMensalidade(
             int alunoId,
             int pagamentoId) {
@@ -413,13 +382,6 @@ public class AcademiaService {
     }
 
 
-    // ====================================
-    // FUNCIONALIDADE PRINCIPAL
-    // ====================================
-
-
-    // Fluxo:
-    // Aluno -> Plano -> Pagamento -> Treino
     public boolean realizarMatriculaCompleta(
             Aluno aluno,
             int planoId,
@@ -462,10 +424,6 @@ public class AcademiaService {
     }
 
 
-    // ====================================
-    // ORDENACAO
-    // ====================================
-
 
     public ArrayList<Aluno>
     listarAlunosOrdenadosPorNome() {
@@ -484,13 +442,8 @@ public class AcademiaService {
     }
 
 
-    // ====================================
-    // INDICADORES
-    // ====================================
 
 
-    // INDICADOR 1:
-    // MEDIA DAS MENSALIDADES.
     public double calcularMediaMensalidades() {
 
         double soma = 0;
@@ -517,8 +470,7 @@ public class AcademiaService {
     }
 
 
-    // INDICADOR 2:
-    // TOTAL ARRECADADO.
+  
     public double calcularTotalArrecadado() {
 
         double total = 0;
@@ -531,8 +483,6 @@ public class AcademiaService {
     }
 
 
-    // INDICADOR 3:
-    // PLANO COM MAIOR VALOR.
     public Plano encontrarPlanoMaisCaro() {
 
         Plano maior = null;
@@ -550,10 +500,6 @@ public class AcademiaService {
         return maior;
     }
 
-
-    // INDICADOR 4:
-    // RANKING DE ALUNOS
-    // POR TOTAL PAGO.
     public ArrayList<Aluno>
     rankingAlunosPorTotalPago() {
 
@@ -572,8 +518,7 @@ public class AcademiaService {
     }
 
 
-    // INDICADOR 5:
-    // TAXA DE INADIMPLENCIA.
+    
     public double calcularTaxaInadimplencia() {
 
         if (alunos.isEmpty()) {
@@ -611,9 +556,6 @@ public class AcademiaService {
     }
 
 
-    // ====================================
-    // RELATORIO
-    // ====================================
 
 
     public void gerarRelatorioGeral() {
@@ -690,9 +632,7 @@ public class AcademiaService {
     }
 
 
-    // ====================================
-    // GETTERS
-    // ====================================
+
 
 
     public ArrayList<Aluno> getAlunos() {
