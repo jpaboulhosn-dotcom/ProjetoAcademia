@@ -39,8 +39,7 @@ public class Treino {
         return exercicios;
     }
 
-    // Regra:
-    // o mesmo exercicio nao pode entrar duas vezes.
+  
     public boolean adicionarExercicio(
             Exercicio exercicio) {
 
