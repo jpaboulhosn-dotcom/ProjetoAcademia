@@ -58,7 +58,7 @@ public class CsvUtil {
                         )
         ) {
 
-            // Ignora o cabecalho.
+            
             reader.readLine();
 
             String linha;
